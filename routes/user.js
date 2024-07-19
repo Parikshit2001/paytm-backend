@@ -13,6 +13,13 @@ const signupBody = zod.object({
   firstName: zod.string(),
   lastName: zod.string(),
 });
+
+router.get("/", (req, res) => {
+  res.json({
+    message: "Healthey user route"
+  })
+})
+
 router.post("/signup", async (req, res) => {
   const { success } = signupBody.safeParse(req.body);
   if (!success) {
