@@ -15,6 +15,6 @@ app.get('/', (req, res) => {
 
 app.use("/api/v1", rootRouter);
 
-app.listen(8000, () => {
+app.listen(3000, () => {
   console.log("Listening on PORT 3000");
 });
